@@ -18,8 +18,13 @@
 }
 
 .titulo{
-
+    font-size: 60px;
     color: #7D2948;
+    font-weight: bold;
+}
+
+.paragrafo{
+    font-size: 25px;
 }
 
 .body-box{
@@ -36,6 +41,31 @@
 
     background-color: #be6136;
     color: white;
+}
+
+label{
+    font-weight: bold;
+}
+
+.box-vagas{
+
+    width: 400px;
+    margin-top: 60px;
+    background-color: #EDE6E6;
+}
+
+.header-vagas{
+    background-color: #7D2948;
+    padding: 15px;
+    color: white
+}
+
+.body-vagas{
+    padding: 15px;
+}
+
+.paragrafo-orange{
+    color: #ED8554;
 }
 
 @media (max-width: 1000px)

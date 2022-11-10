@@ -27,6 +27,9 @@ class Empresa(models.Model):
     def __str__(self):
         return self.nome
 
+    def qtd_vagas(self):
+        return Vagas.objects.filter(empresa__id=self.id).count()
+
 
 class Vagas(models.Model):
     choices_experiencia = (
@@ -44,6 +47,7 @@ class Vagas(models.Model):
     )
 
     empresa = models.ForeignKey(Empresa, on_delete=models.DO_NOTHING)
+    email = models.EmailField(null=True)
     titulo = models.CharField(max_length=30)
     nivel_experiencia = models.CharField(max_length=2, choices=choices_experiencia)
     data_final = models.DateField()
